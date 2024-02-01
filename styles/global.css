@@ -5,8 +5,7 @@
 }
 
 body {
-  width: 1100px;
-  height: 3028px;
+  min-width: 1100px;
   margin: 0 auto;
   color: #000;
   font-family: Raleway, sans-serif;

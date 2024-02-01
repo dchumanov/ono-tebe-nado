@@ -1,3 +1,16 @@
+/* Для выполнения требования 
+"при ширине больше чем в макете контент 
+должен быть или растянут или по центру 
+страницы" 
+создан класс container.
+При его удалении все должно корректно увеличиваться.
+*/
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
 /* Header */
 
 .header {
@@ -25,6 +38,7 @@
 
 .header__link_active {
   text-decoration: none;
+  pointer-events: none;
 }
 
 .header__links-list-item {
@@ -72,7 +86,8 @@
 
 .cover {
   position: relative;
-  height: 757px;
+
+  padding-bottom: 178px;
   background-image: url(../images/cover.jpg);
   background-position: center;
   background-size: 125% 100%;
@@ -110,7 +125,7 @@
   padding-left: 50px;
 }
 
-.aligned-text__second-part {
+.aligned-text_second-part {
   padding-left: 5px;
   letter-spacing: 60px;
 }
@@ -120,12 +135,12 @@
   padding-left: 335px;
 }
 
-.aligned-text_center__inside {
+.aligned-text_center_inside {
   font-size: 100px;
   letter-spacing: 30px;
 }
 
-.aligned-text_center__second-part__inside {
+.aligned-text_center_second-part_inside {
   font-size: 100px;
   letter-spacing: 60px;
 }
@@ -135,11 +150,11 @@
   padding-left: 633px;
 }
 
-.aligned-text_right__inside {
+.aligned-text_right_inside {
   font-size: 100px;
 }
 
-.aligned-text_right__second-part__inside {
+.aligned-text_right_second-part_inside {
   padding-left: 60px;
   font-size: 100px;
   letter-spacing: 30px;
@@ -147,13 +162,12 @@
 
 .cover__description {
   position: relative;
-  top: 125px;
+  top: 127px;
   z-index: 1;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 79px;
   padding-right: 52px;
   padding-left: 78px;
   color: #fff;
@@ -170,7 +184,7 @@
 
 .bet-button {
   border: 1px solid #fff;
-  padding: 12px 32px;
+  padding: 11px 32px;
   color: #fff;
   font-weight: 500;
   font-size: 22px;
@@ -188,6 +202,7 @@
   display: flex;
   flex-direction: column;
   gap: 27px;
+  padding-bottom: 148px;
   background-color: #fff;
 }
 
@@ -203,12 +218,15 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center;*/
   gap: 25px;
+  padding-right: 24px;
+  padding-left: 24px;
   list-style: none;
 }
 
 .lots__card-list-item {
+  flex-grow: 1;
   width: 334px;
   height: 563px;
 }
@@ -265,8 +283,10 @@
 }
 
 .lots__look-more-link {
-  padding-top: 3px;
-  padding-left: 64px;
+  display: block;
+  max-width: fit-content;
+  margin-top: 3px;
+  margin-left: 64px;
   font-size: 20px;
   text-decoration: underline;
   text-decoration-thickness: 2px;
@@ -281,9 +301,9 @@
 
   align-items: start;
   gap: 25px;
-  margin-top: 148px;
-  margin-right: 24px;
-  margin-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 180px;
+  padding-left: 24px;
 }
 
 .about__logo {
@@ -298,8 +318,8 @@
 }
 
 .about__logo-image {
-  width: 60%;
-  height: 60%;
+  width: 61%;
+  height: 61%;
 }
 
 .about__title {
@@ -323,9 +343,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 180px;
-  margin-right: 50px;
-  margin-left: 50px;
+  padding-right: 50px;
+
+  padding-bottom: 88px;
+  padding-left: 50px;
 }
 
 .footer__menu {
